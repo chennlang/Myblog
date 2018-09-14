@@ -1,0 +1,13 @@
+一，创建小程序云项目，创建云环境，上传云函数
+二，安装vant，
+//到Git仓库下载代码
+https://github.com/youzan/vant-weapp.git
+
+将压缩包里的dist文件夹放在miniprogram目录下
+
+使用：在需要的页面json中引入以下配置
+{
+  "usingComponents": {
+    "van-button": "/path/to/vant-weapp/dist/button/index"///path/to/vant-weapp/dist指dist文件所在目录
+  }
+}

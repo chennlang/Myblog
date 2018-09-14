@@ -1,0 +1,2 @@
+<!--pages/list/list.wxml-->
+<van-button type="primary">vant按钮</van-button>
