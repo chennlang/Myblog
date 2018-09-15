@@ -2,23 +2,34 @@
 
   "pages": [
     "pages/index/index",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/my/my"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "Runner科技 ",
+    "navigationBarTitleText": "Runner首页",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "首页"
+      "text": "首页",
+      "iconPath":"/image/home_1.png",
+      "selectedIconPath":"/image/home.png"
     },
     {
       "pagePath": "pages/list/list",
-      "text": "信息"
+      "text": "信息",
+      "iconPath":"/image/fei.png",
+      "selectedIconPath":"/image/fei1.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "信息",
+      "iconPath":"/image/fei.png",
+      "selectedIconPath":"/image/fei1.png"
     }
     ]
   }
