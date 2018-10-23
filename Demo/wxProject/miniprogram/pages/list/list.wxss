@@ -1,1 +1,17 @@
 /* pages/list/list.wxss */
+.banner swiper{
+  height: 400rpx;
+}
+.classify{
+  width: 100%;
+  height: auto;
+  padding-left: 10rpx;
+}
+.classify .class_box{
+  width: 120rpx;
+  height: 120rpx;
+  background-color: red;
+  margin-left: 20rpx;
+  float: left;
+  margin-top: 20rpx;
+}

@@ -21,13 +21,13 @@
     },
     {
       "pagePath": "pages/list/list",
-      "text": "信息",
+      "text": "展示",
       "iconPath":"/image/fei.png",
       "selectedIconPath":"/image/fei1.png"
     },
     {
       "pagePath": "pages/my/my",
-      "text": "信息",
+      "text": "相册",
       "iconPath":"/image/fei.png",
       "selectedIconPath":"/image/fei1.png"
     }

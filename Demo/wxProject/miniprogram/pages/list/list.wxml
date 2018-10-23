@@ -1,2 +1,34 @@
 <!--pages/list/list.wxml-->
-<van-button type="primary">vant按钮</van-button>
+
+<view>
+  <view class="banner">
+  <swiper indicator-dots="true" autoplay="true"  interval="5000" indicator-active-color="#2089DC" circular="true" bindchange="EventHandle" >
+  <block wx:for="{{bannerUrl}}">
+      <swiper-item>
+      <image  src="{{item}}" style="width:100%;"></image>
+      </swiper-item>
+      </block>
+  </swiper>
+  </view>
+  <view class='classify'>
+    <swiper indicator-dots="true" circular="true">
+      <swiper-item>
+        <view class='class_box' wx:for='{{classList}}'>11</view>      
+      </swiper-item>
+      <swiper-item>
+        <view class='class_box'>22</view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+        <view class='class_box'></view>
+      </swiper-item>
+    </swiper>
+    
+  </view>
+  <van-button type="primary">vant按钮</van-button>
+</view>
