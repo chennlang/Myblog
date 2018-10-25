@@ -1,19 +1,20 @@
 <!--pages/list/list.wxml-->
-
-<view>
+<view  bindtouchstart='touchstart' bindtouchmove='touchmover' bindtouchend='touchend'>
   <view class="banner">
-  <swiper indicator-dots="true" autoplay="true"  interval="5000" indicator-active-color="#2089DC" circular="true" bindchange="EventHandle" >
-  <block wx:for="{{bannerUrl}}">
-      <swiper-item>
-      <image  src="{{item}}" style="width:100%;"></image>
-      </swiper-item>
+    <swiper indicator-dots="true" autoplay="true" interval="5000" indicator-active-color="#2089DC" circular="true" bindchange="EventHandle">
+      <block wx:for="{{bannerUrl}}">
+        <swiper-item>
+          <image src="{{item}}" style="width:100%;"></image>
+        </swiper-item>
       </block>
-  </swiper>
+    </swiper>
   </view>
+  <!-- 分类栏 -->
   <view class='classify'>
-    <swiper indicator-dots="true" circular="true">
+    <swiper indicator-dots="true" class='classify_body' autoplay="" interval="" circular="1000">
       <swiper-item>
-        <view class='class_box' wx:for='{{classList}}'>11</view>      
+        <view class='class_box' wx:for='{{classList}}'>
+          <image src='{{item.url}}'></image>{{item.name}}</view>
       </swiper-item>
       <swiper-item>
         <view class='class_box'>22</view>
@@ -28,7 +29,14 @@
         <view class='class_box'></view>
       </swiper-item>
     </swiper>
+  </view>
+  <view style='width:100%;height:330rpx;background-color:#fff;'>
+
+  </view>
+  <view wx:if='{{showLeftBar}}' style='opacity:{{moveX/100}};' class='fix'></view>
+  <!-- 左侧栏 -->
+  <view wx:if='{{showLeftBar}}' style='margin-left:{{moveX-300}}px;' catchtap='closeLeft' class='leftBar' >
     
   </view>
-  <van-button type="primary">vant按钮</van-button>
+  <!-- <van-button type="primary">vant按钮</van-button> -->
 </view>
