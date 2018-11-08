@@ -1,6 +1,6 @@
 <!--pages/list/list.wxml-->
-<view  bindtouchstart='touchstart' bindtouchmove='touchmover' bindtouchend='touchend'>
-  <view class="banner">
+<view>
+  <view class="banner public_shadow">
     <swiper indicator-dots="true" autoplay="true" interval="5000" indicator-active-color="#2089DC" circular="true" bindchange="EventHandle">
       <block wx:for="{{bannerUrl}}">
         <swiper-item>
@@ -13,20 +13,12 @@
   <view class='classify'>
     <swiper indicator-dots="true" class='classify_body' autoplay="" interval="" circular="1000">
       <swiper-item>
-        <view class='class_box' wx:for='{{classList}}'>
+        <view class='class_box public_shadow' wx:for='{{classList}}'>
           <image src='{{item.url}}'></image>{{item.name}}</view>
       </swiper-item>
       <swiper-item>
-        <view class='class_box'>22</view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
-        <view class='class_box'></view>
+          <view class='class_box public_shadow' wx:for='{{classList}}'>
+          <image src='{{item.url}}'></image>{{item.name}}</view>
       </swiper-item>
     </swiper>
   </view>

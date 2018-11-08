@@ -1,45 +1,33 @@
-
-const app = getApp(); 
+// pages/accredit/accredit.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrl: app.globalData.imgUrl,
-    userImg:'../../image/user-unlogin.png',
-    logged: false,
-    nickName:'点击登录'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //已登录
-    if(app.globalData.userInfo){
-      this.setData({
-      userImg:app.globalData.userInfo.avatarUrl,
-      nickName:app.globalData.userInfo.nickName+'的博客'
-      })
-    }else {
-      //未登录
-    }
+
   },
-  onGetUserInfo: function (e) {
-    if (!this.logged && e.detail.userInfo) {
-      this.setData({
-        logged: true,
-        userImg: e.detail.userInfo.avatarUrl,
-        nickName: e.detail.userInfo.nickName + '的博客'
-      })
-    }
+  getUserInfor(){
+    //
+    wx.reLaunch({
+      url: '../../pages/my/my',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**

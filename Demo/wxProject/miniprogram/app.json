@@ -3,7 +3,8 @@
   "pages": [
     "pages/index/index",
     "pages/list/list",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/accredit/accredit"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -13,6 +14,10 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#03A9F4",
+    "borderStyle": "black",
+    "backgroundColor": "#fcfcfc",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",
@@ -27,10 +32,16 @@
     },
     {
       "pagePath": "pages/my/my",
-      "text": "相册",
-      "iconPath":"/image/fei.png",
-      "selectedIconPath":"/image/fei1.png"
+      "text": "博客",
+      "iconPath":"/image/inform.png",
+      "selectedIconPath":"/image/inform1.png"
     }
     ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
   }
 }
