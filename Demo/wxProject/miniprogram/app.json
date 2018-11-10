@@ -1,8 +1,8 @@
 {
 
   "pages": [
-    "pages/index/index",
     "pages/list/list",
+    "pages/index/index",
     "pages/my/my",
     "pages/accredit/accredit"
   ],
@@ -19,13 +19,13 @@
     "borderStyle": "black",
     "backgroundColor": "#fcfcfc",
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/list/list",
       "text": "首页",
       "iconPath":"/image/home_1.png",
       "selectedIconPath":"/image/home.png"
     },
     {
-      "pagePath": "pages/list/list",
+      "pagePath": "pages/index/index",
       "text": "展示",
       "iconPath":"/image/fei.png",
       "selectedIconPath":"/image/fei1.png"

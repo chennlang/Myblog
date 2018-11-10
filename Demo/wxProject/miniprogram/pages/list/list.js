@@ -22,24 +22,23 @@ Page({
       {url:'../../image/run.png',name:"冲浪"},
       {url:'../../image/bicycle.png',name:"运动"},
     ],
-    showLeftBar:false
+    showLeftBar:false,
+    showMotai:false,//遮罩
+    imgUrl: app.globalData.imgUrl,
+    imgUrl_change: app.globalData.imgUrl_change,
+    isShowAphorism:false,//作者介绍
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.cloud.callFunction({
-      // 需调用的云函数名
-      name: 'change',
-      // 传给云函数的参数
-      data: {
-        
-      },
-      // 成功回调
-      complete:function(res){
-        console.log(res)
-      }
+    
+  },
+  colse_aphorism(){
+    this.setData({
+      showMotai: false,
+      isShowAphorism: false
     })
   },
   // touchstart(e){
@@ -101,7 +100,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    let that = this;
+    setTimeout(function(){
+      that.setData({
+        showMotai:true,
+        isShowAphorism:true
+      })
+    },2000)
   },
 
   /**

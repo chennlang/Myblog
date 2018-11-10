@@ -18,6 +18,7 @@ App({
       , 'cloud://runner.7275-runner/designImg/user_bg2.png'
       , 'cloud://runner.7275-runner/designImg/525.png'
       , 'cloud://runner.7275-runner/designImg/welove1.png'
+      ,'cloud://runner.7275-runner/change/aphorism.png'
       ],
       success: res => {
         // get temp file URL
@@ -58,7 +59,8 @@ App({
     
   },
   globalData: {
-    imgUrl:'https://7275-runner-1257628781.tcb.qcloud.la/designImg/',
+    imgUrl:'https://7275-runner-1257628781.tcb.qcloud.la/designImg/',//文件夹desimg
+    imgUrl_change:'cloud://runner.7275-runner/change/',//文件夹change
     url:'sss',
     userInfo:''
   },
