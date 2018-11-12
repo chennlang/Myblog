@@ -84,8 +84,13 @@
   margin-top: 60rpx;
   height: 800rpx;
   border-radius: 20rpx;
-  background-color: red;
+  background-color: #fff;
   z-index: 99;
+  transition: 2s linear;   /*动画时间,速度*/
+	-webkit-transition: 2s ease ;
+	-moz-transition: 2s ease ;
+	-ms-transition: 2s ease ;
+  
 }
 .motail .close_this{
   position: absolute;

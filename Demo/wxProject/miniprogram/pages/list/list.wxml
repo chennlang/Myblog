@@ -2,7 +2,7 @@
 <view>
   <view class="banner public_shadow">
     <swiper indicator-dots="true" autoplay="true" interval="3000" indicator-active-color="#2089DC" circular="true" bindchange="EventHandle">
-      <block wx:for="{{bannerUrl}}">
+      <block wx:for="{{bannerUrl}}" wx:key="index">
         <swiper-item>
           <image src="{{item}}" style="width:100%;"></image>
         </swiper-item>
@@ -13,11 +13,11 @@
   <view class='classify'>
     <swiper indicator-dots="true" class='classify_body' autoplay="" interval="" circular="1000">
       <swiper-item>
-        <view class='class_box public_shadow' wx:for='{{classList}}'>
+        <view class='class_box public_shadow' wx:for='{{classList}}'wx:key="index">
           <image src='{{item.url}}'></image>{{item.name}}</view>
       </swiper-item>
       <swiper-item>
-          <view class='class_box public_shadow' wx:for='{{classList}}'>
+          <view class='class_box public_shadow' wx:for='{{classList}}' wx:key="index">
           <image src='{{item.url}}'></image>{{item.name}}</view>
       </swiper-item>
     </swiper>
@@ -31,7 +31,7 @@
     
   </view>
   <!-- 作者介绍 -->
-  <view class='motail' wx:if='{{isShowAphorism}}'>
+  <view class='motail' wx:if='{{isShowAphorism}}' style='{{motail_top}}'>
     <image src='{{imgUrl_change}}aphorism.png'></image>
     <view class='close_this' catchtap='colse_aphorism'>x</view>
   </view>

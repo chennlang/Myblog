@@ -27,6 +27,7 @@ Page({
     imgUrl: app.globalData.imgUrl,
     imgUrl_change: app.globalData.imgUrl_change,
     isShowAphorism:false,//作者介绍
+    motail_top:'',
   },
 
   /**
@@ -35,10 +36,12 @@ Page({
   onLoad: function (options) {
     
   },
+  // 关闭作者介绍
   colse_aphorism(){
     this.setData({
       showMotai: false,
-      isShowAphorism: false
+      // isShowAphorism: false,
+      motail_top:"margin-top:2000px;opacity: 0;"
     })
   },
   // touchstart(e){
