@@ -1,2 +1,11 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class='container'>
+  <view class='header_top' style='background-image: url({{imgUrl}}user_bg2.png)'>
+    <!-- 头像，获取授权 -->
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar public_shadow" style="background-image: url({{userImg}})"></button>
+    <view class='user_name '>{{nickName}}</view>
+  </view>
+  <view>
+    <image src='{{imgUrl}}aaaa.gif' style='width:750rpx;height:700rpx;'></image>
+  </view>
+</view>

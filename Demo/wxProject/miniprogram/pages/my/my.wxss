@@ -1,1 +1,34 @@
 /* pages/my/my.wxss */
+.header_top{
+  width: 100%;
+  height: 200rpx;
+  padding: 80rpx 40rpx 0rpx;
+  background-color:#ddd;
+  background-size: cover;
+}
+.header_top .userIMgbox{
+  width: 100rpx;
+  height: 100rpx;
+  margin: auto;
+}
+.header_top .user_name{
+  display: block;
+  width: 100%;
+  font-size:32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+}
+/* 头像 */
+.header_top button{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+.header_top button:after {
+  border: none;
+}
+/*  */
