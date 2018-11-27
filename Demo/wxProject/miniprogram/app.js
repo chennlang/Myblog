@@ -6,13 +6,13 @@ App({
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
       wx.cloud.init({
-        traceUser: true,
+        traceUser: true,//记录用户Id
       })
     }
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
-    // this.globalData = {}
+    //下载图片
     wx.cloud.getTempFileURL({
       fileList: ['cloud://runner.7275-runner/designImg/bicycle.png'
       , 'cloud://runner.7275-runner/designImg/user_bg2.png'
@@ -21,11 +21,10 @@ App({
       ,'cloud://runner.7275-runner/change/aphorism.png'
       ],
       success: res => {
-        // get temp file URL
-        console.log(res.fileList)
+       
       },
       fail: err => {
-        // handle error
+       
       }
     })
     // 获取用户信息

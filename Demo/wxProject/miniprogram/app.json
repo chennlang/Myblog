@@ -1,5 +1,5 @@
 {
-
+  "cloud":true,
   "pages": [
     "pages/list/list",
     "pages/index/index",
@@ -26,13 +26,13 @@
     },
     {
       "pagePath": "pages/index/index",
-      "text": "展示",
+      "text": "信息列表",
       "iconPath":"/image/fei.png",
       "selectedIconPath":"/image/fei1.png"
     },
     {
       "pagePath": "pages/my/my",
-      "text": "博客",
+      "text": "博客中心",
       "iconPath":"/image/inform.png",
       "selectedIconPath":"/image/inform1.png"
     }
