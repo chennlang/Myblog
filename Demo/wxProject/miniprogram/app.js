@@ -61,6 +61,8 @@ App({
     imgUrl:'https://7275-runner-1257628781.tcb.qcloud.la/designImg/',//文件夹desimg
     imgUrl_change:'cloud://runner.7275-runner/change/',//文件夹change
     url:'sss',
-    userInfo:''
+    userInfo:'',
+    appid:"wx45e0c4873022512e",
+    secret:"304f2cc51576004961968ccacb0f4a8b"
   },
 })

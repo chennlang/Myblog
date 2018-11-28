@@ -9,13 +9,28 @@
  * - 经过微信鉴权直接可信的用户唯一标识 openid 
  * 
  */
-exports.main = (event, context) => {
-  console.log(event)
-  console.log(context)
+const cloud = require('wx-server-sdk');
+cloud.init();
+const db = cloud.database();
 
+function getData(openid){
+  return new Promise((resolve,reject)=>{
+    db.collection('userInFo').doc(openid).get({
+      success:function(res){
+        resolve(res);
+      }
+    })
+  })
+}
+
+exports.main = async (event, context) => {
+  let data;
+  await getData(event.userInfo.openid).then((res) =>{
+    data = res;
+  })
   // 可执行其他自定义逻辑
   // console.log 的内容可以在云开发云函数调用日志查看
   return {
-    openid: event.userInfo.openId,
-  }
+    data:data
+  };
 }

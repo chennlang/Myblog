@@ -96,16 +96,16 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width:100rpx;
-  height: 100rpx;
+  width:80rpx;
+  height: 80rpx;
   border-radius: 50%;
   margin: auto;
-  margin-bottom: -80rpx;
+  margin-bottom: -100rpx;
   margin-left: 230rpx;
   border:2rpx solid#ddd;
   color: #ddd;
   text-align: center;
-  line-height: 100rpx;
+  line-height: 80rpx;
   font-size:40rpx;
 }
 .motail image{
