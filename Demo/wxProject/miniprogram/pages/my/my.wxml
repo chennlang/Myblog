@@ -6,6 +6,9 @@
     <view class='user_name '>{{nickName}}</view>
   </view>
   <view>
-    <image src='{{imgUrl}}aaaa.gif' style='width:750rpx;height:700rpx;'></image>
+  </view>
+  <!-- 个人分类 -->
+  <view class='user_center'>
+    
   </view>
 </view>

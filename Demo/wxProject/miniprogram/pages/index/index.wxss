@@ -15,6 +15,10 @@
   top: 0;
   z-index: 99;
 }
+.title view{
+  width: 80rpx;
+  display: inline-block;
+}
 .cardList{
   width: 96%;
   height: 200rpx;

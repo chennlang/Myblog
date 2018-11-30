@@ -99,6 +99,7 @@ Page({
         }
       },
       success:function(res){
+        console.log(res)
         wx.showToast({
           title: '添加成供',
         })
@@ -112,12 +113,28 @@ Page({
   },
   getUser(){
     const db = wx.cloud.database();
-    db.collection('userInFo').where({
-      ID:2
-    })
-    .get({
-      success:function(data){
-        console.log('测试',data)
+    // db.collection('userInFo').where({
+    //   _openid:'olZXW5eEn5Yqq_3Qu68Q1YZbT3QA'
+    // })
+    // .get({
+    //   success:function(data){
+    //     console.log('测试',data)
+    //   }
+    // })
+    db.collection('userInFo').doc('W_9dBzxe6pOxy3uY').get().then(res =>{console.log(res)})
+  },
+  setUser(){
+    const db = wx.cloud.database();
+    const _ = db.command;
+    db.collection('userInFo').doc('W_9dBzxe6pOxy3uY').update({
+      data:{
+        last_id:15
+      },
+      success:res =>{
+        console.log(res)
+      },
+      fail:err =>{
+        console.log(err)
       }
     })
   },

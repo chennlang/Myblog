@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -53,6 +53,11 @@
 					"name": "授权",
 					"pathName": "pages/accredit/accredit",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "信息列表",
+					"pathName": "pages/index/index"
 				}
 			]
 		}

@@ -5,6 +5,7 @@
   padding: 80rpx 40rpx 0rpx;
   background-color:#ddd;
   background-size: cover;
+  overflow: hidden;
 }
 .header_top .userIMgbox{
   width: 100rpx;

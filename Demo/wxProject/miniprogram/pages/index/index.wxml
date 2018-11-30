@@ -1,9 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='title'>信息列表</view>
+  <scroll-view scroll-x='{{true}}' class='title'>
+    <view>所有</view>
+    <view>前端</view>
+    <view>设计</view>
+    <view>摄影</view>
+    <view>PS</view>
+    <view>汽车</view>
+    <view>科技</view>
+    <view>个人</view>
+    <view>自然</view>
+    <view>爱心</view>
+    <view>其他</view>
+  </scroll-view>
   <scroll-view>
-  <view class='cardList public_shadow_qin'  wx:for='{{cardList}}' wx:key='{{index}}'>
-    {{item.title}}
-  </view>
+    <view class='cardList public_shadow_qin' wx:for='{{cardList}}' wx:key='{{index}}'>
+      {{item.title}}
+    </view>
   </scroll-view>
 </view>

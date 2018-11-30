@@ -38,7 +38,7 @@ Page({
       wx.cloud.callFunction({
         name:'login',
         data:{
-          url:INFO.avatarUrl,
+          avatarUrl:INFO.avatarUrl,
           city:INFO.city,
           country:INFO.country,
           nikeName:INFO.nikeName,

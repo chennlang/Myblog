@@ -22,8 +22,8 @@
     "list": [{
       "pagePath": "pages/list/list",
       "text": "首页",
-      "iconPath":"/image/home_1.png",
-      "selectedIconPath":"/image/home.png"
+      "iconPath":"/image/Runner.png",
+      "selectedIconPath":"/image/Running.png"
     },
     {
       "pagePath": "pages/index/index",

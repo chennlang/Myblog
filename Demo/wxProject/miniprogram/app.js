@@ -1,4 +1,5 @@
 //app.js
+import { getTemporaryUrl} from './common.js'
 App({
   onLaunch: function () {
     let that=this
@@ -9,24 +10,12 @@ App({
         traceUser: true,//记录用户Id
       })
     }
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    //下载图片
-    wx.cloud.getTempFileURL({
-      fileList: ['cloud://runner.7275-runner/designImg/bicycle.png'
-      , 'cloud://runner.7275-runner/designImg/user_bg2.png'
-      , 'cloud://runner.7275-runner/designImg/525.png'
-      , 'cloud://runner.7275-runner/designImg/welove1.png'
-      ,'cloud://runner.7275-runner/change/aphorism.png'
-      ],
-      success: res => {
-       
-      },
-      fail: err => {
-       
-      }
-    })
+    // // 展示本地存储能力
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    
+    //获取图片临时路径
+    getTemporaryUrl();
     // 获取用户信息
     wx.getSetting({
       success: res => {
