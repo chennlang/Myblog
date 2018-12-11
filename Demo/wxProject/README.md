@@ -10,3 +10,11 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+# 说明
+目前很少看到小程序云开发详细的demo，想着自己写一个贡献下，供参考
+-实现了用户授权
+-实现了用户祖册
+-实现了用户修改个人信息
+-实现了上传头像
+-增加了用户权限
+
