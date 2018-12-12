@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container" bindtap='hideLeft'>
   <scroll-view scroll-x='{{true}}' class='title'>
     <view>所有</view>
     <view>前端</view>
@@ -14,8 +14,32 @@
     <view>其他</view>
   </scroll-view>
   <scroll-view>
+    <!-- 文章列表 -->
     <view class='cardList public_shadow_qin' wx:for='{{cardList}}' wx:key='{{index}}'>
-      {{item.title}}
+      <view class='head-msg'>
+        <view class='head-img'>
+          <image src='/image/computed.png'></image>
+        </view>
+        <view class='head-name'>chenlang</view>
+        <view class='head-time'>2018.12.5</view>
+      </view>
+      <view class='article-title'>{{item.title}}</view>
+      <view class='article-content'>{{item.content}}>></view>
     </view>
   </scroll-view>
+  <view wx:if="{{leftWidth==400}}"  catchtouchmove="myCatchTouch" class='fix'></view>
+  <!-- 侧栏 -->
+  <view class='left-seach' catchtap="sss" catchtouchmove="myCatchTouch">
+    <view style='width:{{leftWidth}}rpx;' class='seach-body'>
+      <view class='left-title'><icon type="search" size="16" color='#fff'></icon> 快速导航</view>
+      <view class='left-list' catchtap='addArticle'><icon type="add" size="16" color='#fff'></icon>添加文章</view>
+      <view class='left-list'>我的文章</view>
+      <view class='left-list'>我的收藏</view>
+      <view class='left-list'>点赞过的</view>
+      <view class='left-list'>猜你喜欢</view>
+      <view class='left-list'>评分</view>
+    </view>
+    <!-- <view class='toch-bar-hide'></view> -->
+    <view wx:if="{{leftWidth==0}}" class='toch-bar' catchtap='showLeftBar'>+</view>    
+  </view>
 </view>

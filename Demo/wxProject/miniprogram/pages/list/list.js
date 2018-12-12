@@ -42,8 +42,8 @@ Page({
         name: "飞机"
       },
       {
-        url: '../../image/run.png',
-        name: "冲浪"
+        url: '../../image/phone.png',
+        name: "手机"
       },
       {
         url: '../../image/bicycle.png',
@@ -202,12 +202,18 @@ Page({
    */
   onReady: function() {
     let that = this;
-    setTimeout(function() {
+    // setTimeout(function() {
       that.setData({
         showMotai: true,
         isShowAphorism: true
       })
-    }, 2000)
+    // }, 2000)
+    setTimeout(function() {//10秒后自动
+      that.setData({
+        showMotai: false,
+        isShowAphorism: false
+      })
+    },10000)
   },
 
   /**

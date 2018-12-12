@@ -32,4 +32,10 @@
 .header_top button:after {
   border: none;
 }
+.user_center .userId{
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 28rpx;
+  border-top: 2rpx solid #000;
+}
 /*  */

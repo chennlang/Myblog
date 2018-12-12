@@ -15,14 +15,15 @@ const db = cloud.database();
 //查询已有的数据中openid是否存在
 function getData(openid){
   return db.collection('userInFo').where({
-      _openid:openid+''
+    openid:openid
     }).get()
 }
 //注册
-function register(obj, last_id){
+function register(obj, _openid, last_id){
   return db.collection('userInFo').add({
     data: {
       ID:last_id+1,
+      openid: _openid,
       all_infor: {
         nikeName:obj.nikeName,
         gender:obj.gender,
@@ -40,31 +41,32 @@ function getLastId(){
     ID:0
   }).get()
 }
-exports.main = async (event, context) => {
-  let data;//是否存在该用户
-  let _last_id;
-  let has_login;
-  let obj = event;
-  await getData(event.userInfo.openId).then((res) =>{
+//更新last_id
+function addLastId(){
+  return db.collection('userInFo').doc('W_z6VTxe6pOxy3q_').update({ data: { last_id: _last_id + 1 } })
+}
+
+var data;//是否存在该用户
+var _last_id;//已存在的最后一位ID
+var _msg;//调用返回信息
+exports.main = async (event, context) => {  
+  var obj = event;
+  var _openid = event.userInfo.openId;
+  await getData(_openid).then((res) =>{
     data = res.data;
   })
   if (data.length == 0){//未注册
-    await getLastId().then( res =>{
+    await getLastId().then( res =>{//获取最大的数字    
     _last_id = res.data[0].last_id;
+    });
+    await register(obj, _openid, _last_id).then(res =>{//注册成功       
     })
-    await register(obj, last_id).then(res =>{//注册成功
-      db.collection('todos').where({
-        ID:0
-      }).update({ data: { last_id:_.inc(1)}})
-    })
-    has_login = false;
+    await addLastId().then(res => {_msg="注册成功！"});//更新lastId成功后再返回
   }else{
-    has_login = true;
+    _msg = "你已经注册过了！"
   }
-  // 可执行其他自定义逻辑
-  // console.log 的内容可以在云开发云函数调用日志查看
   return {
-    data: data,
-    has_login: has_login
+    userData: data,
+    msg:_msg 
   };
 }

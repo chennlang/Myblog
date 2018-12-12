@@ -5,7 +5,8 @@
     "pages/index/index",
     "pages/my/my",
     "pages/accredit/accredit",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/addArticle/addArticle"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

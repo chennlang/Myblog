@@ -22,13 +22,17 @@
       </swiper-item>
     </swiper>
   </view>
-  <view style='width:100%;height:330rpx;background-color:#fff;'>
-      <button catchtap='addUser'>添加信息</button>
-      <button catchtap='getUser'>查看信息</button>
-      <button catchtap='setUser'>修改数据</button>
+  <view class='information'>
+     <view class='info-list' wx:for="{{[5,5,5]}}">
+      <view class='info-img'><image src='{{bannerUrl[1]}}'></image> </view>
+      <view class='info-right'>
+        <view class='info-title'>《快速导航信息列表》</view>
+        <view class='info-body'>欢迎来到我的博客中心，runner博客会一直分享科技新闻。欢迎更多的小伙伴加入我。和我一起探讨</view>
+      </view>
+     </view>
   </view>
   <!-- 遮罩 -->
-  <view wx:if='{{showMotai}}' style='opacity:{{moveX/100}};' class='fix'></view>
+  <view wx:if='{{showMotai}}'  style='opacity:{{moveX/100}};' class='fix'></view>
   <!-- 左侧栏 -->
   <view wx:if='{{showLeftBar}}' style='margin-left:{{moveX-300}}px;' catchtap='closeLeft' class='leftBar'>
 

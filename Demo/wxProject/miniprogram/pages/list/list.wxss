@@ -113,3 +113,46 @@
   height: 100%;
   border-radius: 20rpx;
 }
+/* 快捷信息列表 */
+.information{
+  box-sizing: border-box;
+}
+.info-list{
+  width: 100%;
+  height: 250rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.info-img{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #ddd;
+}
+.info-img image{
+  width: 100%;
+  height: 100%;
+}
+.info-right{
+  width: 480rpx;
+  height: 250rpx;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+}
+.info-title{
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info-body{
+  font-size: 28rpx;
+  color: #999;
+  padding-left: 20rpx;
+  word-break: break-all;
+  overflow: hidden;
+}

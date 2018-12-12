@@ -9,6 +9,6 @@
   </view>
   <!-- 个人分类 -->
   <view class='user_center'>
-    
+    <view class='userId'>欢迎你成为Runner的一员，你的用户ID是：{{runnerInfor.ID}}</view>
   </view>
 </view>

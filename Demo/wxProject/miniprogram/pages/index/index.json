@@ -1,3 +1,6 @@
 {
+  "usingComponents": {
+    "van-button": "../../vant/button/index"
+  },
   "navigationBarTitleText": "欢迎来到我的博客"
 }
