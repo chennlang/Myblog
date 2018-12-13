@@ -9,6 +9,13 @@
   </view>
   <!-- 个人分类 -->
   <view class='user_center'>
-    <view class='userId'>欢迎你成为Runner的一员，你的用户ID是：{{runnerInfor.ID}}</view>
+    <view class='user-info'>{{runnerInfor.ID}}</view>
+  </view>
+  <!-- 其他常用 -->
+  <view class='user-often'>
+    <text class='often-title'>常用</text>
+    <view class='often-content'>
+      <view class='often-list'></view>
+    </view>
   </view>
 </view>
