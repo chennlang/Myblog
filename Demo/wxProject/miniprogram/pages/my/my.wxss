@@ -5,6 +5,7 @@
   padding: 80rpx 40rpx 0rpx;
   background-color:#ddd;
   background-size: cover;
+  overflow: hidden;
 }
 .header_top .userIMgbox{
   width: 100rpx;
@@ -31,4 +32,39 @@
 .header_top button:after {
   border: none;
 }
-/*  */
+/* 用户中心 */
+.user_center{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.user-info{
+  width: 120rpx;
+  height: 120rpx;
+  background-color: red;
+  margin: 30rpx;
+}
+/* 常用 */
+.user-often{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.often-title{
+  font-size: 34rpx;
+  font-weight: bold;
+  padding-left: 30rpx;
+}
+.often-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.often-list{
+  width: 120rpx;
+  height: 120rpx;
+  background-color: red;
+  margin: 30rpx;
+}

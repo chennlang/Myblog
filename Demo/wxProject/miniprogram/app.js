@@ -1,4 +1,5 @@
 //app.js
+import { getTemporaryUrl} from './common.js'
 App({
   onLaunch: function () {
     let that=this
@@ -6,28 +7,15 @@ App({
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
       wx.cloud.init({
-        traceUser: true,
+        traceUser: true,//记录用户Id
       })
     }
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    // this.globalData = {}
-    wx.cloud.getTempFileURL({
-      fileList: ['cloud://runner.7275-runner/designImg/bicycle.png'
-      , 'cloud://runner.7275-runner/designImg/user_bg2.png'
-      , 'cloud://runner.7275-runner/designImg/525.png'
-      , 'cloud://runner.7275-runner/designImg/welove1.png'
-      ,'cloud://runner.7275-runner/change/aphorism.png'
-      ],
-      success: res => {
-        // get temp file URL
-        console.log(res.fileList)
-      },
-      fail: err => {
-        // handle error
-      }
-    })
+    // // 展示本地存储能力
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    
+    //获取图片临时路径
+    getTemporaryUrl();
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -62,6 +50,8 @@ App({
     imgUrl:'https://7275-runner-1257628781.tcb.qcloud.la/designImg/',//文件夹desimg
     imgUrl_change:'cloud://runner.7275-runner/change/',//文件夹change
     url:'sss',
-    userInfo:''
+    userInfo:'',
+    appid:"wx45e0c4873022512e",
+    secret:"304f2cc51576004961968ccacb0f4a8b"
   },
 })

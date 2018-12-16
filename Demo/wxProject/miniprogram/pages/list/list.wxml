@@ -13,26 +13,33 @@
   <view class='classify'>
     <swiper indicator-dots="true" class='classify_body' autoplay="" interval="" circular="1000">
       <swiper-item>
-        <view class='class_box public_shadow' wx:for='{{classList}}'wx:key="index">
+        <view class='class_box public_shadow' wx:for='{{classList}}' wx:key="index">
           <image src='{{item.url}}'></image>{{item.name}}</view>
       </swiper-item>
       <swiper-item>
-          <view class='class_box public_shadow' wx:for='{{classList}}' wx:key="index">
+        <view class='class_box public_shadow' wx:for='{{classList}}' wx:key="index">
           <image src='{{item.url}}'></image>{{item.name}}</view>
       </swiper-item>
     </swiper>
   </view>
-  <view style='width:100%;height:330rpx;background-color:#fff;'>
-
+  <view class='information'>
+     <view class='info-list' wx:for="{{[5,5,5]}}">
+      <view class='info-img'><image src='{{bannerUrl[1]}}'></image> </view>
+      <view class='info-right'>
+        <view class='info-title'>《快速导航信息列表》</view>
+        <view class='info-body'>欢迎来到我的博客中心，runner博客会一直分享科技新闻。欢迎更多的小伙伴加入我。和我一起探讨</view>
+      </view>
+     </view>
   </view>
-  <view wx:if='{{showMotai}}' style='opacity:{{moveX/100}};' class='fix'></view>
+  <!-- 遮罩 -->
+  <view wx:if='{{showMotai}}'  style='opacity:{{moveX/100}};' class='fix'></view>
   <!-- 左侧栏 -->
-  <view wx:if='{{showLeftBar}}' style='margin-left:{{moveX-300}}px;' catchtap='closeLeft' class='leftBar' >
-    
+  <view wx:if='{{showLeftBar}}' style='margin-left:{{moveX-300}}px;' catchtap='closeLeft' class='leftBar'>
+
   </view>
   <!-- 作者介绍 -->
   <view class='motail' wx:if='{{isShowAphorism}}' style='{{motail_top}}'>
-    <image src='{{imgUrl_change}}aphorism.png'></image>
+    <image src='{{imgUrl_change}}principle.png'></image>
     <view class='close_this' catchtap='colse_aphorism'>x</view>
   </view>
   <!-- <van-button type="primary">vant按钮</van-button> -->
