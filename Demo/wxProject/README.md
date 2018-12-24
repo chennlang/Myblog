@@ -13,19 +13,19 @@
 ![avatar](/miniprogram/image/Runner.png)
 
 # 目录结构
-- --cloudfunctions 云函数目录
+- --cloudfunctions 云函数目录  
 >-----change 用户修改数据（修改用户名、用户头像、地址、其他...）
------getuserInfor 获取用户信息
------login用户授权后，会将相应的信息存入数据库
------test 测试阶段，实现后台动态换数据
-- --miniprogram 本地代码目录
->-----image 图片
------page 页面
------vant
------app.js 
------app.json
------app.wxss
------common.js
+-----getuserInfor 获取用户信息  
+-----login用户授权后，会将相应的信息存入数据库  
+-----test 测试阶段，实现后台动态换数据  
+- --miniprogram 本地代码目录  
+>-----image 图片  
+-----page 页面  
+-----vant  
+-----app.js   
+-----app.json  
+-----app.wxss  
+-----common.js  
 
 # 说明
 目前很少看到小程序云开发详细的demo，想着自己写一个贡献下，供参考：
