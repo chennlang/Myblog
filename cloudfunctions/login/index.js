@@ -57,7 +57,7 @@ exports.main = async (event, context) => {
   })
   if (data.length == 0){//未注册
     await getLastId().then( res =>{//获取最大的数字    
-    _last_id = res.data[0].last_id;
+    _last_id = res.data[0].last_id + 100;
     });
     await register(obj, _openid, _last_id).then(res =>{//注册成功       
     })

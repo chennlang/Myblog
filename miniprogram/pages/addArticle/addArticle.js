@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title:'',
+    userName:'',
+    des:'',
+    content:''
   },
 
   /**
@@ -21,7 +24,6 @@ Page({
   onReady: function () {
 
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
@@ -62,5 +64,38 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  addArtice(){
+    wx.cloud.callFunction({
+      name: 'addArtice',
+      data: {
+        content: this.data.content,
+        des: this.data.des,
+        images: [],
+        title: this.data.title,
+        video: [],
+        userName: this.data.userName
+      }
+    })
+    .then(res =>{
+      wx.showToast({
+        title: 'add sucess',
+      })
+      wx.switchTab({
+        url: '../index/index'
+      })
+    });
+  },
+   onJumpListPage (){
+     this.addArtice()
+  },
+  userInput(e){
+    let _this = this
+    let name = e.currentTarget.dataset.name;
+    let val = e.detail.value;
+    _this.data[name] = val;
+    _this.setData({
+      name: _this.data[name]
+    })
   }
 })

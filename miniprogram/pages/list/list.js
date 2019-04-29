@@ -201,19 +201,17 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    let that = this;
-    // setTimeout(function() {
-      that.setData({
-        showMotai: true,
-        isShowAphorism: true
-      })
-    // }, 2000)
-    setTimeout(function() {//10秒后自动
-      that.setData({
-        showMotai: false,
-        isShowAphorism: false
-      })
-    },10000)
+    // let that = this;
+    //   that.setData({
+    //     showMotai: true,
+    //     isShowAphorism: true
+    //   })
+    // setTimeout(function() {//10秒后自动
+    //   that.setData({
+    //     showMotai: false,
+    //     isShowAphorism: false
+    //   })
+    // },10000)
   },
 
   /**

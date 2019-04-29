@@ -9,13 +9,14 @@
   </view>
   <!-- 个人分类 -->
   <view class='user_center'>
-    <view class='user-info'>{{runnerInfor.ID}}</view>
+    <view class='user-info p_bg_org'>{{runnerInfor.ID}}</view>
   </view>
   <!-- 其他常用 -->
   <view class='user-often'>
     <text class='often-title'>常用</text>
     <view class='often-content'>
-      <view class='often-list'></view>
+      <view class='often-list p_bg_org'>发布</view>
+      <view class='often-list p_bg_org'>收藏</view>
     </view>
   </view>
 </view>
