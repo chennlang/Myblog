@@ -5,6 +5,27 @@ Page({
   data: {
     isShowLeft:false,
     leftWidth:0,
+    navList:[
+      {
+        name:'所有',
+        active:true
+      },
+      {
+        name: '前端',
+      },
+      {
+        name: '设计',
+      },
+      {
+        name: '摄影',
+      },
+      {
+        name: 'PS',
+      },
+      {
+        name: '汽车',
+      },
+      ],
     cardList:[
       {
         title:'新的一天，新的开始',
@@ -39,6 +60,7 @@ Page({
 
   onLoad: function() {
     let that = this;
+    this.getArticeData()
   },
   //页面卸载
   onUnload(){
@@ -67,5 +89,25 @@ Page({
     wx.navigateTo({
       url: '../addArticle/addArticle',
     })
+  },
+  getArticeData(){
+    wx.cloud.callFunction({
+      name: 'getArtice',
+      data: {
+
+      },
+      success: res => {
+        console.log('wenzhang', res.result);
+        this.setData({
+          cardList: res.result
+        });
+      },
+      fail: err => {
+        console.log(err)
+        // that.setData({
+        //   runnerInfor: err
+        // })
+      }
+    });
   }
 })

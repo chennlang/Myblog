@@ -1,3 +1,20 @@
 <view class='container'>
-   <view class='title'>111111</view>
+   <view class='title'>请完整填写</view>
+   <view class='ui-form-item'>
+    <label class='ui-label'>文章标题</label>
+    <input class='ui-input' bindinput='userInput' data-name='title' value='{{ title }}' placeholder='请输入文章标题'></input>
+   </view>
+   <view class='ui-form-item'>
+    <label class='ui-label'>作者</label>
+    <input class='ui-input' bindinput='userInput' data-name='userName' value='{{ userName }}' placeholder='请输入文章作者'></input>
+   </view>
+   <view class='ui-form-item'>
+    <label class='ui-label'>简介</label>
+    <input class='ui-input' bindinput='userInput' data-name='des' value='{{ des }}' placeholder='请输入文章简介'></input>
+   </view>
+   <view class='ui-form-item'>
+    <label class='ui-label'>内容</label>
+    <input class='ui-input' bindinput='userInput' data-name='content' value='{{ content }}' placeholder='请输入文章简介'></input>
+   </view>
+   <button class='ui-button' catchtap='onJumpListPage'>完成</button>
 </view>

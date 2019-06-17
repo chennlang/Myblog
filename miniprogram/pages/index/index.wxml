@@ -1,17 +1,8 @@
 <!--index.wxml-->
 <view class="container" bindtap='hideLeft'>
   <scroll-view scroll-x='{{true}}' class='title'>
-    <view>所有</view>
-    <view>前端</view>
-    <view>设计</view>
-    <view>摄影</view>
-    <view>PS</view>
-    <view>汽车</view>
-    <view>科技</view>
-    <view>个人</view>
-    <view>自然</view>
-    <view>爱心</view>
-    <view>其他</view>
+    <view wx:for="{{navList}}" wx:key="{{index}}" 
+    class=" {{item.active?'active p_bg_org':''}}">{{ item.name }}</view>
   </scroll-view>
   <scroll-view>
     <!-- 文章列表 -->
@@ -20,11 +11,11 @@
         <view class='head-img'>
           <image src='/image/computed.png'></image>
         </view>
-        <view class='head-name'>chenlang</view>
-        <view class='head-time'>2018.12.5</view>
+        <view class='head-name'>{{ item.main.userName }}</view>
+        <view class='head-time'>{{ item.creatTime }}</view>
       </view>
-      <view class='article-title'>{{item.title}}</view>
-      <view class='article-content'>{{item.content}}>></view>
+      <view class='article-title p_color_org'>{{item.main.title}}</view>
+      <view class='article-content'>{{item.main.content}}</view>
     </view>
   </scroll-view>
   <view wx:if="{{leftWidth==400}}"  catchtouchmove="myCatchTouch" class='fix'></view>

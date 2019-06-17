@@ -7,7 +7,7 @@ function getTemporaryUrl(){
       , 'cloud://runner.7275-runner/designImg/525.png'
       , 'cloud://runner.7275-runner/designImg/welove1.png'
       , 'cloud://runner.7275-runner/change/aphorism.png'
-      , 'cloud://runner.7275-runner/change/principle.png'
+      // , 'cloud://runner.7275-runner/change/principle.png'
     ],
     success: res => {
         
