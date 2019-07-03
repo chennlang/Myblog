@@ -26,36 +26,7 @@ Page({
         name: '汽车',
       },
       ],
-    cardList:[
-      {
-        title:'新的一天，新的开始',
-        content:'Flex 中使用 justify-content, 规定项目之间的对其方法，如果要让最后一项向右边对齐，如下图显示的：'
-      },
-      {
-        title: '自我规划！',
-        content: 'Flex 中使用 justify-content, 规定项目之间的对其方法，如果要让最后一项向右边对齐，如下图显示的：'
-      },
-      {
-        title: '编程艺术',
-        content: 'Flex 中使用 justify-content, 规定项目之间的对其方法，如果要让最后一项向右边对齐，如下图显示的：'
-      },
-      {
-        title: 'JavaScript',
-        content: 'Flex 中使用 justify-content, 规定项目之间的对其方法，如果要让最后一项向右边对齐，如下图显示的：'
-      },
-      {
-        title: 'canvas理解',
-        content: 'Flex 中使用 justify-content, 规定项目之间的对其方法，如果要让最后一项向右边对齐，如下图显示的：'
-      },
-      {
-        title: 'sss',
-        content: 'Flex 中使用 justify-content, 规定项目之间的对其方法，如果要让最后一项向右边对齐，如下图显示的：'
-      },
-      {
-        title: 'sss',
-        content: 'Flex 中使用 justify-content, 规定项目之间的对其方法，如果要让最后一项向右边对齐，如下图显示的：'
-      },
-    ]
+    cardList:[]
   },
 
   onLoad: function() {
@@ -94,19 +65,16 @@ Page({
     wx.cloud.callFunction({
       name: 'getArtice',
       data: {
-
       },
       success: res => {
-        console.log('wenzhang', res.result);
+        res.result.reverse()
+        .forEach(m => m.creatTime = wx.$tool.common.getTimeFormat(m.creatTime))
         this.setData({
-          cardList: res.result
+          cardList: res.result.reverse()
         });
       },
       fail: err => {
         console.log(err)
-        // that.setData({
-        //   runnerInfor: err
-        // })
       }
     });
   }

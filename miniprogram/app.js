@@ -1,8 +1,12 @@
 //app.js
 import { getTemporaryUrl} from './common.js'
+import API from './api/index.js'
+import tool from './utils/index.js'
 App({
   onLaunch: function () {
     let that=this
+    wx.$API = API
+    wx.$tool = tool
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -52,6 +56,6 @@ App({
     url:'sss',
     userInfo:'',
     appid:"wx45e0c4873022512e",
-    secret:"304f2cc51576004961968ccacb0f4a8b"
+    secret:"304f2cc51576004961968ccacb0f4a8b",
   },
 })

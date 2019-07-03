@@ -15,7 +15,7 @@
         <view class='head-time'>{{ item.creatTime }}</view>
       </view>
       <view class='article-title p_color_org'>{{item.main.title}}</view>
-      <view class='article-content'>{{item.main.content}}</view>
+      <view class='article-content'>{{item.main.des}}</view>
     </view>
   </scroll-view>
   <view wx:if="{{leftWidth==400}}"  catchtouchmove="myCatchTouch" class='fix'></view>

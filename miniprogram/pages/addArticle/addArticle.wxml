@@ -14,7 +14,13 @@
    </view>
    <view class='ui-form-item'>
     <label class='ui-label'>内容</label>
-    <input class='ui-input' bindinput='userInput' data-name='content' value='{{ content }}' placeholder='请输入文章简介'></input>
+    <!-- <input class='ui-input' bindinput='userInput' data-name='content' value='{{ content }}' placeholder='请输入文章简介'></input> -->
+    <textarea
+      class="ui-textarea"
+      bindinput='userInput'
+      data-name='content'
+      value='{{ content }}'
+      placeholder="请输入文章内容" />
    </view>
    <button class='ui-button' catchtap='onJumpListPage'>完成</button>
 </view>

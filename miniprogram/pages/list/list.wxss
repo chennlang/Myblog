@@ -34,7 +34,7 @@
   margin: auto;
 }
 .classify_body{
-  padding: 40rpx 0rpx;
+  height: 340rpx;
 }
 /* 指示点样式 */
 .classify_body .wx-swiper-dots .wx-swiper-dots-horizontal{

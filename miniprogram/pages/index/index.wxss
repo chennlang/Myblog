@@ -57,6 +57,7 @@
   height: 100%;
 }
 .head-name{
+  margin-left: 4rpx;
   font-size: 28rpx;
   color: #666;
 }
