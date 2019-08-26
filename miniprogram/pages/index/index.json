@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-button": "../../vant/button/index"
+    "van-button": "../../vant/button/index",
+    "van-loading": "../../vant/loading/index"
   },
-  "navigationBarTitleText": "欢迎来到我的博客"
+  "navigationBarTitleText": "博客分类"
 }

@@ -1,8 +1,8 @@
 {
   "cloud": true,
   "pages": [
-    "pages/list/list",
     "pages/index/index",
+    "pages/info/info",
     "pages/my/my",
     "pages/accredit/accredit",
     "pages/login/login",
@@ -22,13 +22,13 @@
     "backgroundColor": "#fcfcfc",
     "list": [
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "/image/Runner.png",
         "selectedIconPath": "/image/Running.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/info/info",
         "text": "信息列表",
         "iconPath": "/image/fei.png",
         "selectedIconPath": "/image/fei1.png"

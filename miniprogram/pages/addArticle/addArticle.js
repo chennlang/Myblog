@@ -66,23 +66,39 @@ Page({
 
   },
   addArtice(){
-    wx.cloud.callFunction({
-      name: 'addArtice',
-      data: {
-        content: this.data.content,
-        des: this.data.des,
-        images: [],
-        title: this.data.title,
-        video: [],
-        userName: this.data.userName
-      }
-    })
-    .then(res =>{
+    // wx.cloud.callFunction({
+    //   name: 'addArtice',
+    //   data: {
+    //     content: this.data.content,
+    //     des: this.data.des,
+    //     images: [],
+    //     title: this.data.title,
+    //     video: [],
+    //     userName: this.data.userName
+    //   }
+    // })
+    // .then(res =>{
+    //   wx.showToast({
+    //     title: 'add sucess',
+    //   })
+    //   wx.switchTab({
+    //     url: '../info/info'
+    //   })
+    // });
+    console.log(wx.$API)
+    wx.$API.addArticle({
+      content: this.data.content,
+      des: this.data.des,
+      images: [],
+      title: this.data.title,
+      userName: this.data.userName,
+      video: []
+    }).then(res => {
       wx.showToast({
-        title: 'add sucess',
+        title: '添加成功',
       })
       wx.switchTab({
-        url: '../index/index'
+        url: '../info/info'
       })
     });
   },
