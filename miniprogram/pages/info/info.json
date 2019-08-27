@@ -1,6 +1,7 @@
 {
+  "navigationBarTitleText": "欢迎来到我的博客",
   "usingComponents": {
-    "van-button": "../../vant/button/index"
-  },
-  "navigationBarTitleText": "欢迎来到我的博客"
+    "i-drawer": "../../iview/drawer/index",
+    "i-divider": "../../iview/divider/index"
+  }
 }

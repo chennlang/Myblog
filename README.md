@@ -21,7 +21,7 @@
 - --miniprogram 本地代码目录  
 >-----image 图片  
 -----page 页面  
------vant  
+-----iview
 -----app.js   
 -----app.json  
 -----app.wxss  

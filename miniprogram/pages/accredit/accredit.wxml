@@ -1,5 +1,0 @@
-<view class='container'>
-  <view class='nitice'></view>
-  <button  size="12" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfor" 
-  style="background-color:#fc656f;border-radius:4px;width:90%;color:#fff;height:95rpx;"> 授权登录 </button>
-</view>

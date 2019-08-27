@@ -29,6 +29,9 @@ page{
 .p_bg_org{
   background-color: #fe5e23 !important;
 }
+.p_bg_blue{
+  background-color: #B3e5fc;
+}
 /* form */
 .ui-form-item{
   display: flex;

@@ -1,12 +1,15 @@
 <!--index.wxml-->
 <view class="container" bindtap='hideLeft'>
   <scroll-view scroll-x='{{true}}' class='title'>
-    <view wx:for="{{navList}}" wx:key="{{index}}" 
-    class=" {{item.active?'active p_bg_org':''}}">{{ item.name }}</view>
+    <view wx:for="{{navList}}" wx:key="{{index}}" class=" {{item.active?'active p_bg_org':''}}">{{ item.name }}</view>
   </scroll-view>
   <scroll-view>
     <!-- 文章列表 -->
-    <view class='cardList public_shadow_qin' wx:for='{{cardList}}' wx:key='{{index}}'>
+    <view 
+      class='cardList public_shadow_qin'
+      wx:for='{{cardList}}'
+      wx:key='{{index}}'
+      catchtap="onGotoDetail">
       <view class='head-msg'>
         <view class='head-img'>
           <image src='/image/computed.png'></image>
@@ -17,13 +20,16 @@
       <view class='article-title p_color_org'>{{item.main.title}}</view>
       <view class='article-content'>{{item.main.des}}</view>
     </view>
+    <i-divider content="加载已经完成,没有其他数据"></i-divider>
   </scroll-view>
-  <view wx:if="{{leftWidth==400}}"  catchtouchmove="myCatchTouch" class='fix'></view>
+  <view wx:if="{{leftWidth==400}}" catchtouchmove="myCatchTouch" class='fix'></view>
   <!-- 侧栏 -->
   <view class='left-seach' catchtap="sss" catchtouchmove="myCatchTouch">
     <view style='width:{{leftWidth}}rpx;' class='seach-body'>
-      <view class='left-title'><icon type="search" size="16" color='#fff'></icon> 快速导航</view>
-      <view class='left-list' catchtap='addArticle'><icon type="add" size="16" color='#fff'></icon>添加文章</view>
+      <view class='left-title p_bg_blue'>
+        <icon type="search" size="16" color='#fff'></icon> 快速导航</view>
+      <view class='left-list' catchtap='addArticle'>
+        <icon type="add" size="16" color='#fff'></icon>添加文章</view>
       <view class='left-list'>我的文章</view>
       <view class='left-list'>我的收藏</view>
       <view class='left-list'>点赞过的</view>
@@ -31,6 +37,6 @@
       <view class='left-list'>评分</view>
     </view>
     <!-- <view class='toch-bar-hide'></view> -->
-    <view wx:if="{{leftWidth==0}}" class='toch-bar' catchtap='showLeftBar'>+</view>    
+    <view wx:if="{{leftWidth==0}}" class='toch-bar' catchtap='showLeftBar'>+</view>
   </view>
 </view>

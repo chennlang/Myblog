@@ -63,23 +63,22 @@ Page({
       url: '../addArticle/addArticle',
     })
   },
+  // 获取文章列表
   getArticeData(){
-    wx.cloud.callFunction({
-      name: 'getArtice',
-      data: {
-      },
-      success: res => {
-        const newsList = res.result.reverse()
-        newsList.forEach(m => {
-          m.creatTime = wx.$tool.common.getTimeFormat(m.creatTime)
-        })
-        this.setData({
-          cardList: newsList
-        });
-      },
-      fail: err => {
-        console.log(err)
-      }
-    });
+    app.http.getArticeList().then(res => {
+      const newsList = res.result.reverse()
+      newsList.forEach(m => {
+        m.creatTime = wx.$tool.common.getTimeFormat(m.creatTime)
+      })
+      this.setData({
+        cardList: newsList
+      });
+    })
+  },
+  // 文章详情
+  onGotoDetail () {
+    wx.navigateTo({
+      url: '../articleDetail/articleDetail',
+    })
   }
 })

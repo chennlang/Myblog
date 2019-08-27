@@ -30,27 +30,13 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 5,
+			"current": -1,
 			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "展示",
-					"pathName": "pages/list/list",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/my/my",
-					"query": ""
-				},
 				{
 					"id": -1,
 					"name": "授权",
@@ -59,14 +45,30 @@
 				},
 				{
 					"id": -1,
-					"name": "信息列表",
-					"pathName": "pages/index/index",
+					"name": "添加文章",
+					"pathName": "pages/addArticle/addArticle",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "添加文章",
-					"pathName": "pages/addArticle/addArticle"
+					"name": "pages/info/info",
+					"pathName": "pages/info/info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/info/info",
+					"pathName": "pages/info/info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/articleDetail/articleDetail",
+					"pathName": "pages/articleDetail/articleDetail",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
