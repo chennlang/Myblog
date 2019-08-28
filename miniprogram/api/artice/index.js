@@ -7,7 +7,12 @@ function addArticle(data) {
 function getArticeList () {
   return utils.http('cloud', 'getArtice', {})
 }
+// 获取文章详情
+function getArticeDettail (data) {
+  return utils.http('cloud', 'getArticeDetail', data)
+}
 export default {
   addArticle,
-  getArticeList
+  getArticeList,
+  getArticeDettail
 }

@@ -9,6 +9,7 @@
       class='cardList public_shadow_qin'
       wx:for='{{cardList}}'
       wx:key='{{index}}'
+      id="{{item._id}}"
       catchtap="onGotoDetail">
       <view class='head-msg'>
         <view class='head-img'>

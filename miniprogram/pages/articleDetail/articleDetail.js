@@ -13,10 +13,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadArtcleDetail()
+    this.loadArtcleDetail(options.id)
   },
   // 加载文章信息
-  loadArtcleDetail () {
+  loadArtcleDetail (id) {
+    app.http.getArticeDettail({_id: id}).then(res => {
+      this.getMarkDownData(res.result.main.content)
+    })
+  },
+  // 转换成 markDowm 解析器能识别的格式
+  getMarkDownData (str) {
+    // 将markdown内容转换为towxml数据
+    let data = app.towxml.toJson(str, 'markdown');
+    // 设置文档显示主题，默认'light'
+    data.theme = 'light';
+    this.setData({
+      article: data
+    });
+  },
+  getMarkDown () {
     const _ts = this;
     wx.cloud.callFunction({
       name: 'getMarkDown',

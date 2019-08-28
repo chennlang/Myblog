@@ -22,6 +22,6 @@ function requestBase(url, data) {
 }
 function http(type = 'cloud', name, data) {
   if (type === 'cloud') return requestCloudFucion(name, data)
-  return requestBase(name, data)
+  if (type === 'ajax') return requestBase(name, data)
 }
 export default http

@@ -3,3 +3,8 @@
 @import '/towxml/style/main.wxss';
 /**主题配色（浅色样式）**/
 @import '/towxml/style/theme/light.wxss';
+.content-container {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}

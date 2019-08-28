@@ -1,6 +1,6 @@
-<view class=''>
-  <text>文章详情</text>
+<view class='content-container'>
   <!--引入towxml模版入口文件，并使用模版-->
   <import src="/towxml/entry.wxml"/>
   <template is="entry" data="{{...article}}"/>
+  <!-- <web-view src="https://mp.weixin.qq.com/" bindmessage="msgHandler"></web-view> -->
 </view>

@@ -6,8 +6,6 @@ const Towxml = require('/towxml/main');     //引入towxml库
 App({
   onLaunch: function () {
     let that=this
-    wx.$API = http
-    wx.$tool = tool
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -60,5 +58,6 @@ App({
     secret:"304f2cc51576004961968ccacb0f4a8b",
   },
   towxml:new Towxml(),
-  http: http
+  http: http,
+  tool: tool
 })

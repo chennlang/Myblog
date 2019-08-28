@@ -68,17 +68,19 @@ Page({
     app.http.getArticeList().then(res => {
       const newsList = res.result.reverse()
       newsList.forEach(m => {
-        m.creatTime = wx.$tool.common.getTimeFormat(m.creatTime)
+        m.creatTime = app.tool.common.getTimeFormat(m.creatTime)
       })
+      console.log(newsList)
       this.setData({
         cardList: newsList
       });
     })
   },
   // 文章详情
-  onGotoDetail () {
+  onGotoDetail (e) {
+    const id = e.currentTarget.id
     wx.navigateTo({
-      url: '../articleDetail/articleDetail',
+      url: '../articleDetail/articleDetail?id=' + id,
     })
   }
 })
