@@ -11,8 +11,8 @@
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
 ![avatar](/miniprogram/image/Runner.png)
-
-# 目录结构
+------
+## 目录结构
 - --cloudfunctions 云函数目录  
 >-----change 用户修改数据（修改用户名、用户头像、地址、其他...）
 -----getuserInfor 获取用户信息  
@@ -26,16 +26,19 @@
 -----app.json  
 -----app.wxss  
 -----common.js  
-
-# 说明
+------
+## 说明
 目前很少看到小程序云开发详细的demo，想着自己写一个贡献下，供参考：
 
-##### 实现了用户授权
-##### 实现了用户祖册
-##### 实现了用户修改个人信息
-##### 实现了上传头像
-##### 增加了用户权限
-##### 增加文章上传功能
-# 部分截图
+- 用户授权
+- 用户注册
+- 用户修改个人信息
+- 上传头像
+- 用户权限
+- 文章上传功能
+- 2019.8.28
+  + 添加文章内容支持 markdown 格式
+  + 添加文章详情展示页
+## 部分截图
 
 
