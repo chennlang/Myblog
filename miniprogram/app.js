@@ -54,8 +54,8 @@ App({
     imgUrl_change:'cloud://runner.7275-runner/change/',//文件夹change
     url:'sss',
     userInfo:'',
-    appid:"wx45e0c4873022512e",
-    secret:"304f2cc51576004961968ccacb0f4a8b",
+    appid:"xxx",
+    secret:"xxx",
   },
   towxml:new Towxml(),
   http: http,
